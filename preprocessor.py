@@ -47,7 +47,7 @@ def getDocuments():
                 # find the pattern "<TEXT...<BODY>[body_text]</BODY>..." and get the body_text from the string
                 body_search = re.search(r'<TEXT(.|\n)*<BODY>((.|\n)*)</BODY>', reuter)
                 if body_search is not None: # if the body is not found
-                    doc += body_search.group(2)
+                    doc += " " + body_search.group(2)
 
                 # if both title and body cannot be found, that means that the article is in UNPROC format and it contains
                 # only <TEXT> parameter, not <TITLE> or <BODY>
@@ -79,3 +79,5 @@ def tokenizeDocument():
     print('hello')
 
 getDocuments()
+lst = re.split(r'\s+', documents[0][1])
+print(lst)
