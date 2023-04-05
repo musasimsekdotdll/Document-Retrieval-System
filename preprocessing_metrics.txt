@@ -1,0 +1,4 @@
+Number of tokens before normalization: 130957
+Number of tokens after normalization: 2760537
+Number of terms before normalization: 130957
+Number of terms after normalization: 85248
